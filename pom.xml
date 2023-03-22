@@ -71,7 +71,13 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 	</dependencies>
-
+     
+    <distributionManagment>
+      <repository>
+        <id>nexus</id>
+        <url>http:127.0.0.1:8081/</url>
+      </repository>
+    </distributionManagment>
 	<build>
 		<plugins>
 			<plugin>
