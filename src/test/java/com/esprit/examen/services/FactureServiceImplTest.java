@@ -3,7 +3,7 @@ package com.esprit.examen.services;
 import static org.junit.Assert.*;
 import java.util.List;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -25,7 +25,7 @@ public class FactureServiceImplTest {
 		
 		assertEquals(expected+1, factureService.retrieveAllFactures().size());
 	 	assertNotNull(savedFacture.getMontantFacture());
-	 	factureService.deleteById(savedFacture.getIdFacture());
+	 	factureService.deleteFacture(savedFacture.getIdFacture());
 		
 	} 
 

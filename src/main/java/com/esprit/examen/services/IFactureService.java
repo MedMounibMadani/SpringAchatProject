@@ -11,6 +11,8 @@ public interface IFactureService {
 
 	Facture addFacture(Facture f);
 
+	void deleteFacture(Long f);
+
 	void cancelFacture(Long id);
 
 	Facture retrieveFacture(Long id);
