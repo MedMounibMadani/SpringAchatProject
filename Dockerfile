@@ -4,4 +4,3 @@ WORKDIR /app
 COPY target/tpAchatProject*.jar /app/myapp.jar
 EXPOSE 8089
 CMD ["java", "-jar", "/app/myapp.jar"]
-CMD ["ls", "-l", "target/"]
