@@ -6,7 +6,7 @@ services:
   container_name: mysql-db
   restart: always
   environment: 
-    MYSQL_ROOT_PASSWORD : root
+    MYSQL_ROOT_PASSWORD : "root"
     MYSQL_DATABASE : tpachato
     MYSQL_USER : med
     MYSQL_PASSWORD : root 
@@ -23,9 +23,9 @@ services:
   depends_on: 
     - db
   environment: 
-    SPRING_DATASOURCE_URL :  "jdbc:mysql://localhost:3306/tpachato?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
-    SPRING_DATASOURCE_USERNAME :  root
-    SPRING_DATASOURCE_PASSWORD :  root 
+    SPRING_DATASOURCE_URL :  "jdbc:mysql://mysql-db:3306/tpachato?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+    SPRING_DATASOURCE_USERNAME : "root"
+    SPRING_DATASOURCE_PASSWORD : "root" 
   networks:
     - network
 networks:
