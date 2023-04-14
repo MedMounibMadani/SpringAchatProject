@@ -2,7 +2,7 @@
 version: '3.9'
 services:
  db:
-  image: mysql:latest
+  image: mysql:5.1.46
   restart: always
   environment: 
     MYSQL_ROOT_PASSWORD : root
@@ -14,7 +14,7 @@ services:
   networks:
     - network
   volumes: 
-    - ./db:/var/lib/mysql 
+    - ./db_app:/var/lib/mysql 
  app: 
   build: .
   ports: 
